@@ -13,7 +13,12 @@ function Home()
     );
 
     if (error) return <h1>Error Found</h1>
-            
+    
+    function  climate() {
+        getWeather();
+    }
+   
+       
     if(data) {
         console.log(data);
 
@@ -22,7 +27,7 @@ function Home()
         <div className='Home'>
             <h1>Enter the city</h1>
             <input type="text" placeholder='City Name' onChange={(event) => setCity(event.target.value)} /> 
-            <button onClick={()=>getWeather}>
+            <button onClick={climate}>
                 Find..
             </button>
 
